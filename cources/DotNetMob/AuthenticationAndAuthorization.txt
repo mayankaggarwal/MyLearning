@@ -1,0 +1,6 @@
+Nuget Packages
+Microsoft.AspNet.Identity.EntityFramework
+Microsoft.AspNet.WebApi.Cors
+Microsoft.AspNet.Identity.Owin
+Microsoft.Owin.Host.SystemWeb
+Owin.Cors
