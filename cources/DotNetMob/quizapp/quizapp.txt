@@ -34,4 +34,8 @@ src
 11. On client side in quizservice implement method to register user and getting questions
 12. In quiz service add properties to save questions, timing details
 13. In Quiz compoenent call getQuestions and start timer
-14.
+14 In QUiz compoment add card component to show questions and answers.
+15 In question compoment show current time elapsed
+16. In Quiz compoment show progress bar using preloader.
+17. In Quiz service add method to get Answers from API
+18. 
