@@ -1,0 +1,37 @@
+src
++--->app
+|	|
+|	+--->register
+|	|	|---register.component.ts
+|	|
+|	+--->navbar
+|	|	|---navbar.component.ts
+|	|	
+|	+--->quiz
+|	|
+|	|
+|	+--->result
+|	|
+|	|
+|	+--->shared
+|		|---quiz.service.ts
+|	
+|--->routes.ts
+|
++--->auth
+|	|---auth.guard.ts
+
+1. Create Angular app according to above structure
+2. In index.html Add referece to Material css js and JQuery js and material icons css
+3. Remove contents of app component and add router outlet
+4. Add app.routes.ts file and define routes for various components and add the routes component in app.module
+5. Add cards and forms related html in Registration component and add FormsModule in App module
+6. Add required validators on the page and add the css in styles.css
+7. Create tables with data in database
+8. Create WebAPI project in visual studio
+9. Install Nuget package Install-Package Microsoft.AspNet.WebApi.Cors
+10. Implement Web API actions for registering user, getting questions and getting answers
+11. On client side in quizservice implement method to register user and getting questions
+12. In quiz service add properties to save questions, timing details
+13. In Quiz compoenent call getQuestions and start timer
+14.
