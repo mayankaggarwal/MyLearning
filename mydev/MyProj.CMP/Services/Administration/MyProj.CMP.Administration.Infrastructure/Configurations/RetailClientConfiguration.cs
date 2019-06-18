@@ -11,7 +11,7 @@ namespace MyProj.CMP.Administration.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<RetailClient> builder)
         {
-            builder.ToTable("RetailClient");
+            builder.ToTable("RetailClient", "Market");
             builder.HasKey(n => n.Id);
             builder.Property(n => n.Id).ForSqlServerUseSequenceHiLo("pk1_RetailClient");
             builder.Property(n => n.Name).IsRequired(true).HasMaxLength(100);

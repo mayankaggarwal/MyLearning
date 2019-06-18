@@ -11,7 +11,7 @@ namespace MyProj.CMP.Administration.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<ClientType> builder)
         {
-            builder.ToTable("ClientType");
+            builder.ToTable("ClientType", AdministrationDBContext.DEFAULT_SCHEMA);
             builder.HasKey(n => n.Id);
             builder.Property(n => n.Id).ForSqlServerUseSequenceHiLo("pk1_ClientType");
             builder.Property(x => x.Name).IsRequired(true).HasMaxLength(255).IsUnicode(true);

@@ -11,9 +11,10 @@ namespace MyProj.CMP.Administration.Infrastructure.Configurations
     {
         public void Configure(EntityTypeBuilder<Account> builder)
         {
-            builder.ToTable("Account");
+            builder.ToTable("Account", AdministrationDBContext.DEFAULT_SCHEMA);
             builder.HasKey(n => n.Id);
             builder.Property(n => n.Id).ForSqlServerUseSequenceHiLo("pk1_Account");
+            //builder.Property(n => n.Id).UseSqlServerIdentityColumn();
             builder.Property(n => n.Name).IsRequired(true).HasMaxLength(100);
             builder.Property(n => n.Email).IsRequired(true).HasMaxLength(255);
             builder.HasIndex(u => u.Name).IsUnique();
