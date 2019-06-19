@@ -30,7 +30,7 @@ namespace WebApplication1
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<AdministrationDBContext>(options =>
             {
-                options.UseNpgsql("Host=localhost;Database=Administration;Username=postgres;Password=admin123+", b => b.MigrationsAssembly("WebApplication1"));
+                options.UseNpgsql("Host=localhost;Database=Administration;Username=postgres;Password=admin123+", b => b.MigrationsAssembly("WebApplication1").MigrationsHistoryTable("_EFMigrationHistory", AdministrationDBContext.DEFAULT_SCHEMA));
             });
         }
 

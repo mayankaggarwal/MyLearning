@@ -16,14 +16,17 @@ namespace WebApplication1.Migrations
 
             migrationBuilder.CreateSequence(
                 name: "pk1_Account",
+                schema:"administration",
                 incrementBy: 10);
 
             migrationBuilder.CreateSequence(
                 name: "pk1_Client",
+                schema: "administration",
                 incrementBy: 10);
 
             migrationBuilder.CreateSequence(
                 name: "pk1_ClientType",
+                schema: "administration",
                 incrementBy: 10);
 
 
@@ -106,16 +109,6 @@ namespace WebApplication1.Migrations
                         principalTable: "Account",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.InsertData(
-                schema: "Market",
-                table: "RetailClient",
-                columns: new[] { "Id", "Description", "MarketSiteCode", "Name" },
-                values: new object[,]
-                {
-                    { 1L, "Tesco UK", "Tesco_UK", "TescoUK" },
-                    { 2L, "Exito Colombia", "CCO", "ExitoCO" }
                 });
 
             migrationBuilder.InsertData(
@@ -205,13 +198,16 @@ namespace WebApplication1.Migrations
                 schema: "administration");
 
             migrationBuilder.DropSequence(
-                name: "pk1_Account");
+                name: "pk1_Account",
+                schema: "administration");
 
             migrationBuilder.DropSequence(
-                name: "pk1_Client");
+                name: "pk1_Client",
+                schema: "administration");
 
             migrationBuilder.DropSequence(
-                name: "pk1_ClientType");
+                name: "pk1_ClientType",
+                schema: "administration");
         }
     }
 }
