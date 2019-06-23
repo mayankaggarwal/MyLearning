@@ -1,0 +1,19 @@
+syntax = "proto3";
+option csharp_namespace = "MyProj.FileUpload.Model";
+
+service FileUploadService {
+    rpc SayHello(MyRequest) returns (MyResponse){}
+	rpc SendData(stream MyData) returns (MyResponse){}
+}
+
+message MyData {
+	bytes data=1;
+}
+
+message MyRequest {
+    string req=1;
+}
+
+message MyResponse {
+    string resp=1;
+}

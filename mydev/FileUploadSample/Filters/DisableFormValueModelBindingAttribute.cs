@@ -11,7 +11,7 @@ namespace FileUploadSample.Filters
         public void OnResourceExecuting(ResourceExecutingContext context)
         {
             var factories = context.ValueProviderFactories;
-            //factories.RemoveType<FormValueProviderFactory>();
+            factories.Remove(new FormValueProviderFactory());
             //factories.RemoveType<JQueryFormValueProviderFactory>();
         }
 

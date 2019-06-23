@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "FileUploadWebApi"
+		},
+		{
+			"path": "FileUploadAngular"
+		},
+		{
+			"path": "FileGenerator"
+		}
+	],
+	"settings": {}
+}
