@@ -18,9 +18,9 @@ namespace MyProj.gRPC.Client
             var client = new FileUploadService.FileUploadServiceClient(channel);
             var response = client.SayHello(new MyRequest { Req = "Hello Client" });
             Console.WriteLine(response.Resp);
-            string filePath = @"D:\Samples\source\customfile_4000000023-06-2019_16_09_43.csv";
+            string filePath = @"D:\Samples\source\customfile_100000029-06-2019_17_02_21.csv";
             using (fileReader = new FileStream(filePath, FileMode.Open,FileAccess.Read))
-            using(var call = client.SendData())
+            using(var call = client.SendDataForCloud())
             {
                 byte[] fileData;
                 long fileSize = fileReader.Length;

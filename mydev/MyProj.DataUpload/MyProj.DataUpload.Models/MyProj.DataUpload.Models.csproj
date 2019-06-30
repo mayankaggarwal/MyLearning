@@ -1,23 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Google.Cloud.Storage.V1" Version="2.3.0" />
+    <Protobuf Include="protos/file_request.proto" Link="file_request.proto" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.8.0" />
     <PackageReference Include="Grpc" Version="1.21.0" />
-    <PackageReference Include="Grpc.Core" Version="1.21.0" />
     <PackageReference Include="Grpc.Tools" Version="1.21.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\MyProj.gRPC.Models\MyProj.gRPC.Models.csproj" />
-  </ItemGroup>
-
 </Project>
