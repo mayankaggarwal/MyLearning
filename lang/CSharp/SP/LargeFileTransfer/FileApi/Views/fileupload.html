@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS File Upoad Example with $http and FormData</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="../Scripts/app.js"></script>
+    <script src="../Scripts/controllers/filecontroller.js"></script>
+    <script src="../Scripts/services/fileservice.js"></script>
+</head>
+
+<body ng-app="fupApp">
+    <div ng-controller="funController as ctrl">
+
+        <input type="file" id="file1" name="file" multiple
+               ng-files="getTheFiles($files)" />
+
+        <input type="button" ng-click="ctrl.uploadFiles()" value="Upload" />
+        <input type="button" ng-click="ctrl.testApi()" value="Test" />
+        <select ng-model='ctrl.selectedFile' ng-options='fileName for fileName in ctrl.files'></select>
+        <input type="button" ng-click="ctrl.downloadFile()" value="Download" />
+    </div>
+</body>
+<!--<script>
+    angular.module('fupApp', [])
+        .directive('ngFiles', ['$parse', function ($parse) {
+
+            function fn_link(scope, element, attrs) {
+                var onChange = $parse(attrs.ngFiles);
+                element.on('change', function (event) {
+                    onChange(scope, { $files: event.target.files });
+                });
+            };
+
+            return {
+                link: fn_link
+            }
+        } ])
+        .controller('funController', function ($scope, $http) {
+
+            var formdata = new FormData();
+            $scope.getTheFiles = function ($files) {
+                angular.forEach($files, function (value, key) {
+                    formdata.append(key, value);
+                });
+            };
+
+            // NOW UPLOAD THE FILES.
+            $scope.uploadFiles = function () {
+
+                var request = {
+                    method: 'POST',
+                    url: '/filestreaming/files/',
+                    data: formdata,
+                    headers: {
+                        'Content-Type': undefined
+                    }
+                };
+
+                // SEND THE FILES.
+                $http(request)
+                    .success(function (d) {
+                        alert(d);
+                    })
+                    .error(function () {
+                    });
+            }
+        });
+</script>-->
+</html>

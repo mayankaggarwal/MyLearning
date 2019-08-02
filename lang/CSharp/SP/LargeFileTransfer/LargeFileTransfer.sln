@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargeFileTransfer", "LargeFileTransfer\LargeFileTransfer.csproj", "{BAF18593-54B0-4B1A-981C-73E6DFDB45C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerModule", "LoggerModule\LoggerModule.csproj", "{1A3C33BD-B491-4D3F-93F3-9C69E6307EBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileApi", "FileApi\FileApi.csproj", "{B86D2279-A78C-4EB6-AF2E-1061FC56F518}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BAF18593-54B0-4B1A-981C-73E6DFDB45C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF18593-54B0-4B1A-981C-73E6DFDB45C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF18593-54B0-4B1A-981C-73E6DFDB45C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF18593-54B0-4B1A-981C-73E6DFDB45C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3C33BD-B491-4D3F-93F3-9C69E6307EBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3C33BD-B491-4D3F-93F3-9C69E6307EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3C33BD-B491-4D3F-93F3-9C69E6307EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3C33BD-B491-4D3F-93F3-9C69E6307EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B86D2279-A78C-4EB6-AF2E-1061FC56F518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B86D2279-A78C-4EB6-AF2E-1061FC56F518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B86D2279-A78C-4EB6-AF2E-1061FC56F518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B86D2279-A78C-4EB6-AF2E-1061FC56F518}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
