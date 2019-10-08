@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Aerospike.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +27,8 @@ namespace MyProj.Aerospike.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IDataModeller, DataModeller>();
-            services.AddSingleton<IAerospikeClient, AerospikeClient>();
+            string hostName = Configuration.GetValue<string>("AerospikeHost");
+            services.AddSingleton<IAerospikeClient>(x => new AerospikeClient(hostName, 3000));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
