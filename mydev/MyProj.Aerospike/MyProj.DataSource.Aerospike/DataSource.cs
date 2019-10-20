@@ -26,7 +26,7 @@ namespace MyProj.DataSource.Aerospike
         {
             try
             {
-                _client.Add(null, new Key(_config._namespace, _config._setname, key), new Bin(_config._binname, value));
+                _client.Put(null, new Key(_config._namespace, _config._setname, key), new Bin(_config._binname, value));
                 _logger.LogInformation($"Insert record with key :{key}");
                 return await Task.Run(() => new DbResponse { Success = true });
             } catch(Exception exp)
