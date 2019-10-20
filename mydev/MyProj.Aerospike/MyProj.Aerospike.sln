@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.Aerospike", "MyProj.Aerospike\MyProj.Aerospike.csproj", "{CD0C15E4-9531-45BB-AA78-617E2E1FF427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.Aerospike.API", "MyProj.Aerospike.API\MyProj.Aerospike.API.csproj", "{2094BB23-E188-47A8-98F6-EE73344C8356}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProj.Aerospike.API", "MyProj.Aerospike.API\MyProj.Aerospike.API.csproj", "{2094BB23-E188-47A8-98F6-EE73344C8356}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.Dataloader", "MyProj.Dataloader\MyProj.Dataloader.csproj", "{9D928115-C507-45E2-8245-B269ED3B547F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.DataSource.Aerospike", "MyProj.DataSource.Aerospike\MyProj.DataSource.Aerospike.csproj", "{DFEA1843-9FEA-4697-B6CF-02153BE7D20F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.DataSource.Contracts", "MyProj.DataSource.Contracts\MyProj.DataSource.Contracts.csproj", "{39DD5F29-6F44-45BB-907E-A183052CD86E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.DataSource.Utilities", "MyProj.DataSource.Utilities\MyProj.DataSource.Utilities.csproj", "{9F6DB922-7349-483E-9892-4FFD83CD0FCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD0C15E4-9531-45BB-AA78-617E2E1FF427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD0C15E4-9531-45BB-AA78-617E2E1FF427}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD0C15E4-9531-45BB-AA78-617E2E1FF427}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD0C15E4-9531-45BB-AA78-617E2E1FF427}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2094BB23-E188-47A8-98F6-EE73344C8356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2094BB23-E188-47A8-98F6-EE73344C8356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2094BB23-E188-47A8-98F6-EE73344C8356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2094BB23-E188-47A8-98F6-EE73344C8356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D928115-C507-45E2-8245-B269ED3B547F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D928115-C507-45E2-8245-B269ED3B547F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D928115-C507-45E2-8245-B269ED3B547F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D928115-C507-45E2-8245-B269ED3B547F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEA1843-9FEA-4697-B6CF-02153BE7D20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEA1843-9FEA-4697-B6CF-02153BE7D20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEA1843-9FEA-4697-B6CF-02153BE7D20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEA1843-9FEA-4697-B6CF-02153BE7D20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DD5F29-6F44-45BB-907E-A183052CD86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DD5F29-6F44-45BB-907E-A183052CD86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DD5F29-6F44-45BB-907E-A183052CD86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DD5F29-6F44-45BB-907E-A183052CD86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6DB922-7349-483E-9892-4FFD83CD0FCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6DB922-7349-483E-9892-4FFD83CD0FCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6DB922-7349-483E-9892-4FFD83CD0FCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6DB922-7349-483E-9892-4FFD83CD0FCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

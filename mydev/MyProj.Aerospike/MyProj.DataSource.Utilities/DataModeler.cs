@@ -1,16 +1,15 @@
-﻿using MyProj.Aerospike.Models;
+﻿using MyProj.DataSource.Contracts;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace MyProj.Aerospike.Utilities
+namespace MyProj.DataSource.Utilities
 {
     public class DataModeler
     {
-        public IEnumerable<Customer> GetData(long numberOfRecords,long? idStartNumber = null)
+        public IEnumerable<Customer> GetData(long numberOfRecords, long? idStartNumber = null)
         {
             if (idStartNumber == null) idStartNumber = 1;
-            for(long i = idStartNumber.Value; i <= numberOfRecords; i++)
+            for (long i = idStartNumber.Value; i <= numberOfRecords; i++)
             {
                 Customer cust = new Customer
                 {

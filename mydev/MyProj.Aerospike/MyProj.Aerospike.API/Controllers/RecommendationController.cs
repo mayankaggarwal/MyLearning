@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Aerospike.Client;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MyProj.Aerospike.API.Services;
+using MyProj.DataSource.Contracts;
 using Newtonsoft.Json.Linq;
 
 namespace MyProj.Aerospike.API.Controllers
@@ -15,19 +15,20 @@ namespace MyProj.Aerospike.API.Controllers
     [ApiController]
     public class RecommendationController : ControllerBase
     {
-        IAerospikeClient client;
-        public RecommendationController(IAerospikeClient dbClient,IDataModeller dataModeller)
+        IDataSource _source;
+        public RecommendationController(IDataSource source)
         {
-            client = dbClient;
+            _source = source;
         }
 
         [Route("products/{customerId:long}")]
         public async Task<IActionResult> Get(long customerId)
         {
-            var key = new Key("test", "myset", $"{customerId:000000000000000}");
-            var result = client.Get(null, key);
-            JObject obj = JObject.Parse(result.GetString("recommendation"));
-            return this.StatusCode(200, obj);
+            var obj = _source.Get<JObject>($"{customerId:000000000000000}");
+            if (obj != null)
+                return StatusCode(200, obj);
+            else
+                return StatusCode(404);
         }
     }
 }

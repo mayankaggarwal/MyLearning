@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using MyProj.Aerospike.API.Services;
+using MyProj.DataSource.Aerospike;
 
 namespace MyProj.Aerospike.API
 {
@@ -26,9 +26,7 @@ namespace MyProj.Aerospike.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IDataModeller, DataModeller>();
-            string hostName = Configuration.GetValue<string>("AerospikeHost");
-            services.AddSingleton<IAerospikeClient>(x => new AerospikeClient(hostName, 3000));
+            services.UseAerospike(Configuration);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

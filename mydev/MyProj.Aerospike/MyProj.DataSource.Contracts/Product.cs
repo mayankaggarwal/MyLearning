@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyProj.Aerospike.Models
+namespace MyProj.DataSource.Contracts
 {
     public class Product
     {
