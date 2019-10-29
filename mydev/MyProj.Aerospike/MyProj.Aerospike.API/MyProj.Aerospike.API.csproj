@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="RedHat.AspNetCore.Server.Kestrel.Transport.Linux" Version="2.2.0-181121-755" />
     <PackageReference Include="System.Text.Json" Version="4.6.0" />
   </ItemGroup>
 

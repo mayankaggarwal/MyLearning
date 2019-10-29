@@ -14,8 +14,8 @@
     <hashTree>
       <com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup guiclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroupGui" testclass="com.blazemeter.jmeter.threads.concurrency.ConcurrencyThreadGroup" testname="AerospikeAPI_Test" enabled="true">
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <stringProp name="TargetLevel">10</stringProp>
+        <stringProp name="ThreadGroup.on_sample_error">startnextloop</stringProp>
+        <stringProp name="TargetLevel">50</stringProp>
         <stringProp name="RampUp">1</stringProp>
         <stringProp name="Steps">6</stringProp>
         <stringProp name="Hold">4</stringProp>
@@ -28,8 +28,8 @@
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">${__P(ASAPIServer,localhost)}</stringProp>
-          <stringProp name="HTTPSampler.port">${__P(ASAPIPort,57834)}</stringProp>
+          <stringProp name="HTTPSampler.domain">${__P(ASAPIServer,13.76.198.78)}</stringProp>
+          <stringProp name="HTTPSampler.port">${__P(ASAPIPort,80)}</stringProp>
           <stringProp name="HTTPSampler.protocol">http</stringProp>
           <stringProp name="HTTPSampler.contentEncoding"></stringProp>
           <stringProp name="HTTPSampler.path">/api/recommendation/products/${customerId}</stringProp>

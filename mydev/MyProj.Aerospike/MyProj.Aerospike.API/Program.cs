@@ -19,6 +19,7 @@ namespace MyProj.Aerospike.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            .UseLinuxTransport()
                 .UseStartup<Startup>();
     }
 }
