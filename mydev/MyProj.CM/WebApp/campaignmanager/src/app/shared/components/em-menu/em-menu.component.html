@@ -1,0 +1,15 @@
+<div class="col">
+    <div class="row">
+        <ul *ngFor="let item of emMenuModel;" class="col list-inline border-0 bg-base-gray-300 m-0 p-0">
+            <li class="border border-bottom-0 border-base-gray-100 bg-base-gray-100">
+                <a [attr.id]="'aMenu' + item.title" [ngClass]="{'active':activePage == item.activePageName}" 
+                    (click)="activePage=item.activePageName">
+                    <label class="m-0 p-2 pl-3 pr-3 text cursor-hand"
+                    [ngClass]="{'bg-base-gray-300': activePage != item.activePageName, 'text-base-dark': activePage != item.activePageName, 'text-dh-turquoise': activePage == item.activePageName, 'bg-base-gray-100': activePage == item.activePageName}">
+                    {{item.title}}
+                    </label>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

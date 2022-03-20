@@ -1,0 +1,56 @@
+<div *ngIf = "model">
+    <ng-container ngSwitch="{{model.type}}">
+        <ng-template #contentTpl>
+            <ng-content select="span"></ng-content>
+        </ng-template>
+
+        <ng-container *ngSwitchCase="messageType.DhFailure">
+            <div class="alert alert-danger dh-wardwrap" [class.alert-dismissible]="model.dhDismissible && model.dhDismissible==true">
+                <div class="pull-right cursor-hand" (click)="onClose(this)" *ngIf="model.dhDismissible && model.dhDismissible==true"><i class="fa fa-close"></i></div>
+                <div><i class="fa fa-exclamation-circle"></i><ng-container *ngTemplateOutlet="contentTpl"></ng-container></div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="messageType.DhInfo">
+            <div class="alert alert-info" [class.alert-dismissible]="model.dhDismissible && model.dhDismissible==true">
+                <div class="pull-right cursor-hand" (click)="onClose(this)" *ngIf="model.dhDismissible && model.dhDismissible==true"><i class="fa fa-close"></i></div>
+                <div><i class="fa fa-info-circle"></i><ng-container *ngTemplateOutlet="contentTpl"></ng-container></div>
+            </div>
+        </ng-container>
+
+        <div *ngSwitchCase="messageType.DhLoading">
+            <em>{{pageModel.loading}}</em>
+            <p>{{model.description}}</p>
+            <ng-content select="span"></ng-content>
+        </div>
+
+        <ng-container *ngSwitchCase="5">
+            <div class="alert alert-info">
+                <div><i class="fa fa-cog fa-spin"></i>
+                    <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="messageType.DhSuccess">
+            <div class="alert alert-success alert-dismissable">
+                <div class="pull-right cursor-hand" (click)="onClose(this)" *ngIf="model.dhDismissible && model.dhDismissible==true"><i class="fa fa-close"></i></div>
+                <div><i class="fa fa-check"></i><ng-container *ngTemplateOutlet="contentTpl"></ng-container></div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="messageType.DhDisclaimer">
+            <div class="alert alert-info row" [class.alert-dismissible]="model.dhDismissible && model.dhDismissible==true">
+                <div class="col p-0"><strong>{{pageModel.txtDisclaimer}}</strong><ng-container *ngTemplateOutlet="contentTpl"></ng-container></div>
+                <div class="pull-right cursor-hand" (click)="onClose(this)" *ngIf="model.dhDismissible && model.dhDismissible==true"><i class="fa fa-close"></i></div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="messageType.DhNote">
+            <div class="alert alert-info">
+                <div><i><strong>{{pageModel.txtNote}}</strong></i><ng-container *ngTemplateOutlet="contentTpl"></ng-container></div>
+            </div>
+        </ng-container>
+        <div *ngSwitchDefault>{{pageModel.invalidMsgType}}</div>
+    </ng-container>
+</div>

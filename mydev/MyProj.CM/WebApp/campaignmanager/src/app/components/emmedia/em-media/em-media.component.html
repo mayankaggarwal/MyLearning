@@ -1,0 +1,6 @@
+<app-em-menu [(current-tab)]="currentTab">hello</app-em-menu>
+<div class="bg-base-gray-100 p-4 content-container">
+    <div class="bg-white p-3" [ngClass]="{'bg-base-gray-100': ( currentTab && currentTab.name == applicationModule.dashboard)}">
+        <router-outlet></router-outlet>
+    </div>
+</div>

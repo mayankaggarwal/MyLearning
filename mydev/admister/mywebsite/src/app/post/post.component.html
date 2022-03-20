@@ -1,0 +1,14 @@
+    <div data-wow-delay="0.4s">
+      <div class="post-block-content">
+        <h3>{{post.title}}</h3>
+        <p class="post-sub">{{post.author}} | {{post.publisheddate | date:'dd-MMMM-yyyy'}}</p>
+        <div class="post-featured-image">
+          <img src="../../assets/images/gallery-images/{{post.image}}">
+        </div>
+        <ul>
+            <div markdown [data]="post.excert" id="preview"></div>
+        </ul>
+        <a routerLink="/article/{{post.id}}" class="button">Read More</a>
+        <a routerLink="/article-edit/{{post.id}}" class="button">Edit</a>
+      </div>
+    </div>

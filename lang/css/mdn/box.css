@@ -1,0 +1,70 @@
+p, 
+ul {
+  border: 2px solid rebeccapurple;
+  padding: .5em;
+}
+
+.block,
+li {
+  border: 2px solid blue;
+  padding: .5em;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+.block {
+    display: block;
+  }      
+ 
+  .container {
+    border: 2px solid blue;
+  }
+  .one {
+    margin-bottom: 50px;
+  }
+
+  .two {
+    margin-top: 30px;
+  }
+
+  .container2 {
+    border-bottom: 20px double rgb(23,45,145);
+    border-top: 5px dotted green;
+    border-right: 1px solid black;
+  }
+
+  .box2 {
+    border: 1px solid #3333;
+    border-top-style: groove;
+    border-right-width: 20px;
+    border-bottom-color: hotpink;
+  }
+
+  .pclass {
+    width: 250px;
+  }
+  .pclass span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+  }
+
+  .pclass2 {
+    width: 250px;
+  }
+
+  .pclass2 span {
+    margin: 20px;
+    padding: 20px;
+    width: 80px;
+    height: 50px;
+    background-color: lightblue;
+    border: 2px solid blue;
+    display: inline-block
+  }

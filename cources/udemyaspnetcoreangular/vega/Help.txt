@@ -1,0 +1,21 @@
+mkdir Models
+mkdir Mapping
+mkdir Persistance
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package AutoMapper
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+
+Add to csproj
+ <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="1.0.0-msbuild2-final" />
+  </ItemGroup>
+  <ItemGroup>
+  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" />
+</ItemGroup>
+
+dotnet restore
+dotnet ef migrations add InitialModel
+dotnet ef migrations update
+dotnet ef migrations add SeedDatabase
+

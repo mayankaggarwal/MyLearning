@@ -1,0 +1,8 @@
+<ul *ngIf="menuOpen" [class.expanded]="menuOpen === true">
+    <li *ngFor="let menuitem of menu">
+      <a routerLink="{{menuitem.link}}" routerLinkActive="active" [routerLinkActiveOptions] = "{exact: true}" (click) = "changeStatus($event)">{{menuitem.title}}</a>
+    </li>
+    <li>
+      <a (click)="logout()">Logout</a>
+    </li>
+  </ul>

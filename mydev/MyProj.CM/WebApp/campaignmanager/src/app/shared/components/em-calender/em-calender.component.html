@@ -1,0 +1,23 @@
+<form class="form-inline mt-2">
+    <div class="form-group">
+        <div class="input-group box-shadow-none">
+            <input class="form-control em-calender box-shadow-none" placeholder="dd MMM yyyy"
+                [name]="name" [(mgModel)]="editDateField"
+                readonly
+                [disabled]="disabled"
+                (ngModelChange)="datemodelChange()"
+                (ngBlur)="onInnerBlur()"
+                [showWeekNumbers]="showWeekNumbers"
+                [navigation]="navigation"
+                [displayMonths]="displayMonths"
+                placement="auto"
+                ngbDatepicker #d="ngbDatepicker" tabindex="-1"
+            >
+            <div class="input-group-append" style="display:flex;">
+                <button class="btn em-calender-button box-shadow-none" [disabled]="disabled" (click)="d.toggle()" type="button">
+                    <i class="fa fa-calender form-control-feedback em-calender-icon"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

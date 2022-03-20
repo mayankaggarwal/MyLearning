@@ -1,0 +1,43 @@
+<section id="articleedit" class="secondary-color text-center scrollto clearfix">
+    <div class="row clearfix">
+        <div class="col-1-3 container">
+            <div class="panel">
+                <div class="panel-body">
+                        <h4 class="text-center"><i class="ion-log-in"></i> Create the post</h4>
+
+                        <form [formGroup]="postcreateForm" (ngSubmit)="createPost(postcreateForm.value)">
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" name="title" placeholder="Title" formControlName="title">
+                                <span class="ion-key form-control-icon"></span>
+                            </div>
+                            <div class="form-group" hidden>
+                                <input type="text" class="form-control input-lg" name="author" placeholder="Author" formControlName="author">
+                                <span class="ion-at form-control-icon"></span>
+                            </div>
+                            <div class="form-group" hidden>
+                                <input type="text" class="form-control input-lg" name="publisheddate" placeholder="Published Date" formControlName="publisheddate">
+                                <span class="ion-at form-control-icon"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="10" class="form-control input-lg" name="excert" placeholder="Post" formControlName="excert"></textarea>
+                                <span class="ion-at form-control-icon"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-lg" name="image" placeholder="Image" formControlName="image">
+                                <span class="ion-at form-control-icon"></span>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-success"> Save</button>
+                        </form>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-2-3 container">
+            <div class="panel">
+                <div class="panel-body">
+                    <div markdown [data]="postcreateForm.value.excert" id="preview"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

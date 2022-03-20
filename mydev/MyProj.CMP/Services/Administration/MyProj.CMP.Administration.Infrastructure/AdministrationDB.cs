@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MyProj.CMP.Administration.Domain.Contracts;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MyProj.CMP.Administration.Infrastructure
 {
-    class AdministrationDB
+    public class AdministrationDB:IAdministrationDB
     {
     }
 }

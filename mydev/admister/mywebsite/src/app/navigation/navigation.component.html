@@ -1,0 +1,7 @@
+<nav id="nav-main">
+  <app-navmenu [menu]="menu" [menuOpen]="true"></app-navmenu>
+</nav>
+<div id="nav-trigger"><span [class.open] = "menuOpen === true" (click)="toggleMenu(!menuOpen)"></span></div>
+<nav id="nav-mobile">
+  <app-navmenu [menu]="menu" [menuOpen]="menuOpen" (toggleMenu) = "toggleMenu($event)"></app-navmenu>
+</nav>

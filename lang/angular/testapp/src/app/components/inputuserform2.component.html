@@ -1,0 +1,16 @@
+<form novalidate (onSubmit)="onSubmit(user)" [formGroup] = "user">
+	<label>
+		<input type="text" name="name" placeholder="Your full name">
+  	</label>
+  	<div>
+    	<label>
+      		<span>Email address</span>
+      		<input type="email" name="email" placeholder="Your email address">
+    	</label>
+    	<label>
+      		<span>Confirm address</span>
+      		<input type="email" name="confirm" placeholder="Confirm your email address">
+    	</label>
+  	</div>
+  	<button type="submit">Sign up</button>
+</form>

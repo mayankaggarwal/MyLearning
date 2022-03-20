@@ -1,0 +1,29 @@
+<h2>Bookstore</h2>
+<hr>
+<p>
+  <a [routerLink]="['/bootstore/new']" class="btn btn-primary">New Book</a>
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Sr.</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Author Name</th>
+      <th>Publisher Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of bookstores">
+      <td>{{b.id}}</td>
+      <td>{{b.name}}</td>
+      <td>{{b.title}}</td>
+      <td>{{b.authorName}}</td>
+      <td>{{b.publisherName}}</td>
+      <td>
+        <a [routerLink]="['/bookstore/', b.id]">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

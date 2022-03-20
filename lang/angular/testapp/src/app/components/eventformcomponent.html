@@ -1,0 +1,22 @@
+<div>
+	<form [formGroup]="eventForm">
+		<div class="form-group">
+			<select id="eventType" name="eventType" formControlName="eventType" 
+				[(ngModel)]="selectedEventType" (ngModelChange)="onEventTypeChange($event)" required>
+				<option value="">Select</option>
+				<option [ngValue]="et" *ngFor="let et of eventTypes">{{et.name}}</option>
+			</select>
+		</div>
+		<input class="form-control" id="eventName" type="text" name="eventName" formControlName="eventName">
+		<div>
+		<!--<div *ngFor="let ev of channels.controls">
+   			<input type="checkbox" formControlName="checked" [checked] = "ev.controls.checked.value">{{ev.controls.value.value}}
+  		</div>-->
+			<div *ngFor="let ev of eventChannels;let i=index">
+				<input type="checkbox" [checked]="ev.checked" (change)="ev.checked = !ev.checked;selectedChannelsArray=mapChannels(eventChannels);selectedChannels.setValue(selectedChannelsArray)">{{ev.name}}
+			</div>
+		</div>
+		<p>Form value: {{ eventForm.value | json }}</p>
+		<p>Form status: {{ eventForm.status | json }}</p>
+	</form>
+</div>

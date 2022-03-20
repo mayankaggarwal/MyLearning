@@ -1,0 +1,55 @@
+<div class="col route-content w-100 h-100">
+    <div class="row align-items-center mt-5">
+        <h1 class="no-border mx-auto text-white fs-36">{{pageModel.title}}</h1>
+    </div>
+    <div class="row align-items-center">
+        <h1 class="mx-auto text-white mb-5">{{pageModel.byline}}</h1>
+    </div>
+    <div *ngIf="!hasOfferManagerAccess && !hasEventManagerAccess">
+        <div class="row align-items-center">
+            <h1 class="mx-auto text-white">{{pageModel.accessDenied}}</h1>
+        </div>
+        <div class="row align-items-center">
+            <h1 class="mx-auto text-white">
+                <em><small>
+                    {{pageModel.contact}}
+                    <a href="mailto:mayankaggarwal1989@gmail.com?subject=Help" id="ServiceEmail" tabindex="-1" class="dummyAnchor">
+                        {{pageModel.serviceDeskEmail}}
+                    </a>
+                </small></em>
+            </h1>
+        </div>
+    </div>
+    <div  class="row mx-auto mt-5 row-eq-height">
+        <div class="col-3"></div>
+        <button class="col-md-4 col-lg-3 rounded m-3 py-3 bg-white cursor-hand" [disabled]="!hasOfferManagerAccess"
+            [ngClass]="{'cursor-hand': hasOfferManagerAccess, 'cursor-disabled': !hasOfferManagerAccess}"
+            (click)="onSelectOfferManager()">
+            <div class="row align-items-center mx-auto">
+                <h3 class="no-border mx-auto text-uppercase" [ngClass]="{'text-dh-magenta' : hasOfferManagerAccess}">{{pageModel.offerManager_title}}</h3>
+            </div>
+            <p>{{pageModel.offerManager_description}}</p>
+        </button>
+        <button class="col-md-4 col-lg-3 rounded m-3 py-3 bg-white cursor-hand" [disabled]="!hasEventManagerAccess"
+            [ngClass]="{'cursor-hand': hasEventManagerAccess, 'cursor-disabled': !hasEventManagerAccess}"
+            (click)="onSelectOfferManager()">
+            <div class="row align-items-center mx-auto">
+                <h3 class="no-border mx-auto text-uppercase" [ngClass]="{'text-dh-magenta' : hasEventManagerAccess}">{{pageModel.eventManager_title}}</h3>
+            </div>
+            <p>{{pageModel.eventManager_description}}</p>
+        </button>
+    </div>
+    <div class="row mx-auto align-items-center mt-5 col-6">
+        <h2 class="text-white mb-5">
+            <em><small class=" op-7">
+                {{pageModel.TermsAndCondition1}}
+                <a href="/cmpwebapp/tnc" target="_blank" class="dummyAnchor tcanchor">{{pageModel.TermsAndCondition2}}</a>
+                {{pageModel.TermsAndCondition3}}
+                <a href="/cmpwebapp/cookiepolicy" target="_blank" class="dummyAnchor tcanchor">{{pageModel.CookiePolicy}}</a>
+                {{pageModel.CookiePolicyDesc1}}
+                <a href="/cmpwebapp/cookiepolicy" target="_blank" class="dummyAnchor tcanchor">{{pageModel.CookiePolicyLinkClick}}</a>
+                {{pageModel.CookiePolicyDesc2}}
+            </small></em>
+        </h2>
+    </div>
+</div>

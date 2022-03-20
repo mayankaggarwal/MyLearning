@@ -1,0 +1,18 @@
+<form novalidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+	<label>
+		<span>Full Name</span>
+		<input type="text" name="name" placeholder="Your Full Name" ngModel>
+	</label>
+	<div ngModelGroup="account">
+		<label>
+		<span>Email Address</span>
+		<input type="email" name="email" placeholder="Your email address" ngModel>
+		</label>
+		<label>
+			<span>Confirm Address</span>
+			<input type="email" name="confirm" placeholder="Confirm your email address" ngModel>
+		</label>
+	</div>
+	<div>{{f.value | json}}</div>
+	<button type="submit">Sign Up</button>
+</form>

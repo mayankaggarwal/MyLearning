@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyProj.CMP.Administration.Domain\MyProj.CMP.Administration.Domain.csproj" />
+    <ProjectReference Include="..\MyProj.CMP.Administration.Infrastructure\MyProj.CMP.Administration.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

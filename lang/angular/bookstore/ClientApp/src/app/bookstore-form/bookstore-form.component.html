@@ -1,0 +1,36 @@
+<h2>Book Store</h2>
+<hr>
+<p>
+  <a [routerLink]="['/bookstore']" class="btn btn-primary">Back to List</a>
+</p>
+
+<form #f="ngForm" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="bookstore.name" name="name" required #name="ngModel">
+    <div class="alert alert-danger" *ngIf="name.touched && !name.valid">Please Enter Name</div>
+  </div>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" id="name" class="form-control" [(ngModel)]="bookstore.title" name="title" required #title="ngModel">
+    <div class="alert alert-danger" *ngIf="title.touched && !title.valid">Please Enter Title</div>
+  </div>
+
+  <div class="form-group">
+    <label for="authorName">Author Name</label>
+    <input type="text" id="autherName" class="form-control" [(ngModel)]="bookstore.authorName" name="authorName" required #authorName="ngModel">
+    <div class="alert alert-danger" *ngIf="authorName.touched && !authorName.valid">Please Enter Author Name</div>
+  </div>
+
+  <div class="form-group">
+    <label for="publisherName">Publicher Name</label>
+    <input type="text" id="publisherName" class="form-control" [(ngModel)]="bookstore.publisherName" name="publisherName" required #publisherName="ngModel">
+    <div class="alert alert-danger" *ngIf="publisherName.touched && !publisherName.valid">Please Enter Publisher Name</div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" [disabled]="!f.valid" value="Add"/>
+  <input type="button" class="btn btn-danger" value="Delete" (click)="delete()" *ngIf="bookstore.id"/>
+
+
+</form>

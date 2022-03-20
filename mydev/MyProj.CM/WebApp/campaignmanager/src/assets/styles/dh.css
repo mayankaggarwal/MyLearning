@@ -1,0 +1,64 @@
+.bg-dh-black-10 {
+    background-color: #e5e5e5 !important;
+}
+
+a.bg-dh-black-10:hover, a.bg-dh-black-10:focus,
+button.bg-dh-black-10:hover,
+button.bg-dh-black-10:focus {
+    background-color: #cccccc !important;
+}
+
+.text-dh-magenta {
+    color: #cf348d !important;
+}
+
+a.text-dh-magenta:hover, a.text-dh-magenta:focus {
+    color:#a82872 !important;
+}
+
+.displaysidebar {
+    display: block;
+}
+
+.text-dh-turquoise {
+    color: #39b2ab !important;
+}
+
+a.text-dh-turquoise:hover, a.text-dh-turquoise:focus {
+    color: #2d8b86 !important;
+}
+
+.em-calender {
+    background-color: #FFF !important;
+}
+
+.em-calender:focus {
+    border: 1px solid #ced4da;
+    border-right-color: transparent !important;
+}
+
+.em-calender::placeholder {
+    color: #828282;
+    opacity: 0.8;
+    border: 0px;
+}
+
+.form-control-calender {
+    border-right: 0px;
+    border-radius: 3px;
+    background-color: #FFF;
+}
+
+.em-calender-icon {
+    color: #C7C7C7;
+}
+
+.em-calender-button {
+    border: 1px solid #ced4da;
+    border-left: 0px;
+    background-color: #FFF;
+}
+
+#weekdays {
+    padding-bottom: 0px;
+}

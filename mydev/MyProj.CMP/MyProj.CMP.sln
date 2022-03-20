@@ -33,9 +33,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.CMP.Database.Helpers", "MyProj.CMP.Database.Helpers\MyProj.CMP.Database.Helpers.csproj", "{E884FAD1-60AF-42EA-8F3B-E901A7DC7C8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProj.CMP.Administration.DBRunner", "Services\Administration\MyProj.CMP.Administration.DBRunner\MyProj.CMP.Administration.DBRunner.csproj", "{BD379353-C86C-4C28-8616-F97D5D80EEA1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProj.CMP.Administration.DBRunner", "Services\Administration\MyProj.CMP.Administration.DBRunner\MyProj.CMP.Administration.DBRunner.csproj", "{BD379353-C86C-4C28-8616-F97D5D80EEA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "Services\Administration\WebApplication1\WebApplication1.csproj", "{F89AB0EA-73C8-48C4-ADFA-201FB5952A67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "Services\Administration\WebApplication1\WebApplication1.csproj", "{F89AB0EA-73C8-48C4-ADFA-201FB5952A67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProj.CMP.Administration.Client", "Services\Administration\MyProj.CMP.Administration.Client\MyProj.CMP.Administration.Client.csproj", "{03062ECD-9128-4019-98F2-398CF9018762}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{F89AB0EA-73C8-48C4-ADFA-201FB5952A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89AB0EA-73C8-48C4-ADFA-201FB5952A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89AB0EA-73C8-48C4-ADFA-201FB5952A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03062ECD-9128-4019-98F2-398CF9018762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03062ECD-9128-4019-98F2-398CF9018762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03062ECD-9128-4019-98F2-398CF9018762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03062ECD-9128-4019-98F2-398CF9018762}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +113,7 @@ Global
 		{E884FAD1-60AF-42EA-8F3B-E901A7DC7C8C} = {8055FD19-28D6-4991-B568-1F4184C0C3DA}
 		{BD379353-C86C-4C28-8616-F97D5D80EEA1} = {22CD977C-38C5-4E6F-AB9F-565E555A5C1E}
 		{F89AB0EA-73C8-48C4-ADFA-201FB5952A67} = {22CD977C-38C5-4E6F-AB9F-565E555A5C1E}
+		{03062ECD-9128-4019-98F2-398CF9018762} = {22CD977C-38C5-4E6F-AB9F-565E555A5C1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {403EAFEA-A3C4-4F21-AEFB-D76DAA0E15A4}

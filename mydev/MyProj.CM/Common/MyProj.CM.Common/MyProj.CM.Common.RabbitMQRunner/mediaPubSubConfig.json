@@ -1,0 +1,157 @@
+﻿[
+  {
+    "Name": "DE.DeadLetter",
+    "Type": "direct",
+    "Durable": "true",
+    "AutoDelete": "false",
+    "MessageDelayEnable": "true",
+    "ExchangeVersion": 1
+  },
+  {
+    "Name": "TE.CmpWebApp",
+    "Type": "topic",
+    "Durable": "true",
+    "AutoDelete": "false",
+    "MessageDelayEnable": "true",
+    "ExchangeVersion": 7,
+    "Queue": [
+      {
+        "Name": "Q.CmpWebApp.Audiences",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnAudienceUpsertRequested",
+          "OnAudienceReachCompleted",
+          "OnAudienceProductGroupUpserted"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Nominations",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnNominationObjectStatusChangeRequested",
+          "OnGroupUpserted",
+          "OnNominationUpsertRequested",
+          "OnAudienceUpserted",
+          "OnEligibleNominationRequested",
+          "OnNominationEmailNotificationProcessed"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Groups",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnGroupUpsertRequested"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.ScienceExecution",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnEventExecutionCallRequested",
+          "OnAudienceReachRequested"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Jobs",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnJobObjectStatusChangeRequested",
+          "OnJobCreated",
+          "OnNominationUpserted",
+          "OnJobCompleting",
+          "OnEventObjectStatusChanged"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Events",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnEventExecutionRequested",
+          "OnEventExecutionRequestCompleted",
+          "OnEligibleNominationRequestCompleted",
+          "OnCJPushInitiated"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Notifications",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnJobCompleted",
+          "OnNominationObjectStatusChanged",
+          "OnCJPushNotification"
+        ]
+      },
+      {
+        "Name": "Q.CmpWebApp.Administrator",
+        "Durable": "true",
+        "Exclusive": "false",
+        "AutoDelete": "false",
+        "Properties": {
+          "x-message-ttl": 864000000,
+          "x-expires": 31536000000,
+          "x-dead-letter-exchange": "DE.DeadLetter",
+          "x-queue-mode": "lazy"
+        },
+        "RoutingKeys": [
+          "OnClientBrandCategoryUploadRequested"
+        ]
+      }
+    ]
+  }
+]

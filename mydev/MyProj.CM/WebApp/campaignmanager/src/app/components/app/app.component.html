@@ -1,0 +1,52 @@
+<div class="row m-0">
+  <div class="p-0 bg-base-white col-2 h-100 menu-display"
+      [ngClass] = "{'displaysidebar' : opensidebar, 'hidesidebar': !opensidebar}"
+      *ngIf = "opensidebar && (applicationName == 'eventmanager' || applicationName == 'offermanager')">
+    <nav class="col">
+      <div class="col p-3">
+        <h4>
+          <i class="fa fa-close float-right cursor-hand" (click)="opensidebar = !opensidebar;">
+            <span class="pr-2 float-left">{{pageModel.close}}</span>
+          </i>
+        </h4>
+      </div>
+      <div class="col p-0 pt-5">
+        <h3>
+          <button class="btn btn-link text-base-gray-600"
+            [disabled]="!hasEventManagerAccess"
+            [ngClass]="{'text-base-teal': applicationName == 'eventmanager', 'text-base-gray-300 cursor-disabled': !hasEventManagerAccess}"
+            (click) = "onSelectEventManager()">
+            {{pageModel.eventManager}}
+          </button>
+        </h3>
+      </div>
+      <div class="col p-0">
+        <h3>
+          <button class="btn btn-link text-base-gray-600"
+            [disabled]="!hasOfferManagerAccess"
+            [ngClass]="{'text-base-teal': applicationName == 'offermanager', 'text-base-gray-300 cursor-disabled': !hasOfferManagerAccess}"
+            (click) = "onSelectOfferManager()">
+            {{pageModel.offerManager}}
+          </button>
+        </h3>
+      </div>
+      <div class="col-2 fixed-bottom"></div>
+    </nav>
+  </div>
+
+  <div class="overlay" *ngIf = "opensidebar && (applicationName == 'eventmanager' || applicationName == 'offermanager')">
+  </div>
+  <div id="body-content" class="p-0 bg-base-gray-100 col">
+    <i class="fa fa-bars cursor-had switch-menu" *ngIf = "opensidebar && (applicationName == 'eventmanager' || applicationName == 'offermanager')"></i>
+    <app-em-header></app-em-header>
+    <div class="col p-0 bg-base-gray-100">
+      <div class="col p-0" id="content-container">
+        <div class="col p-0 bg-white min-container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    <app-em-footer></app-em-footer>
+
+  </div>
+</div>
